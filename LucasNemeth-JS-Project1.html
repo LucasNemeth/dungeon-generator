@@ -12,35 +12,48 @@
     <section class="map">
         <div id="floor"></div>
         <div id="obstacles"></div>
-        <div id="furniture"></div>
         <div id="monsters"></div>
         <div id="characters"></div>
     </section>
     <section class="options">
-        <h2>Select the properties of the map grounds</h2>
-        <button class="floorGrass">Grass</button>
+        <div class="floorOptions">
+            <h2>Select the properties of the map terrain:</h2>
+            <button class="floorGrass">Grass</button>
 
-        <button class="floorRocks">Rocks</button>
+            <button class="floorStone">Stone</button>
 
-        <button class="floorWood">Wood</button>
+            <button class="floorWood">Wood</button>
 
-        <button class="floorWater">Water</button>
+            <button class="floorWater">Water</button>
 
-        <button class="floorLava">Lava</button>
-        <!-- <form id="floorOptions"> 
-            <h3>Floors:</h3>
-            <input type="radio" name="floor" value="rocks" id="floorRocks">
-            <label for="floorRocks">Rocks</label>
-
-            <input type="radio" name="floor" value="wood" id="floorWood">
-            <label for="floorWood">Wood</label>
-
-            <input type="radio" name="floor" value="lava" id="floorLava">
-            <label for="floorLava">Lava</label>
-
-            <input type="radio" name="floor" value="water" id="floorWater">
-            <label for="floorWater">Water</label>
-        </form> -->
+            <button class="floorLava">Lava</button>
+        </div>
+        <div class="obstacleOptions">
+            <h2>Obstacles:</h2>
+            <div class="obstacleOptionsNone">
+                <p>Please select Floor</p>
+            </div>
+            <div class="obstacleOptionsGrass">            
+                <button>Bushes</button>
+                <button>Trees</button>
+            </div>
+            <div class="obstacleOptionStone">
+                <button>Pit of spikes</button>
+                <button>Rocks</button>
+            </div>
+            <div class="obstacleOptionWood">
+                <button>Bar</button>
+                <button>Barrels</button>
+            </div>
+            <div class="obstacleOptionWater">
+                <button>Ship Wreckage</button>
+                <button>Iceberg</button>
+            </div>
+            <div class="obstacleOptionLava">
+                <button>Fire</button>
+                <button>Spikes</button>
+            </div>
+        </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
