@@ -7,3 +7,32 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 *, *:before, *:after {box-sizing: inherit}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+.map{
+    position: relative;
+    display: block;
+    width: 600px;
+    height:600px;
+    border: 5px solid black;
+}
+
+.map div {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+.floorGrass{
+    background:rgb(67, 167, 67)
+}
+.floorWood{
+    background: rgb(204, 170, 125);
+}
+.floorRocks{
+    background: rgb(139, 139, 139);
+}
+.floorWater{
+    background: rgb(6, 235, 235);
+}
+.floorLava{
+    background: rgb(233, 63, 2);
+}
