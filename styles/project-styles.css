@@ -14,6 +14,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     width: 500px;
     height:500px;
     border: 5px solid black;
+    /* left: 50vw; */
 }
 
 .map div {
@@ -22,6 +23,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     display: block;
     position: absolute;
 }
+
+/* .options{
+    text-align: center;
+} */
 
 .obstacleOptions div:not(.obstacleOptionsNone){
     display: none;
@@ -32,6 +37,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     background-image: url(../assets/floor-grass.jpg);
     background:cover;
 }
+
 .floorWood{
     background-image: url(../assets/floor-wood.jpg);
     background-size: contain;
@@ -46,5 +52,32 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 }
 .floorLava{
     background-image: url(../assets/floor-lava.jpg);
+    background-size: contain;
+}
+
+
+/*---Obstacles --*/
+.bushObstacle{
+    background-image: url(../assets/obstacle-bush.png);
+    background-size: contain;
+}
+.treeObstacle{
+    background-image: url(../assets/obstacle-tree.png);
+    background-size: contain;
+}
+.pitObstacle{
+    background-image: url(../assets/pit-obstacle.png);
+    background-size: contain;
+}
+.rocksObstacle{
+    background-image: url(../assets/rock-obstacle.png);
+    background-size: contain;
+}
+.barrelObstacle{
+    background-image: url(../assets/barrel-obstacle.png);
+    background-size: contain;
+}
+.chestObstacle{
+    background-image: url(../assets/chest-obstacle.png);
     background-size: contain;
 }
