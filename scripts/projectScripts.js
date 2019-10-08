@@ -92,6 +92,31 @@ $(function(){
         });
     }
     addCharacters();
+
+    //-----------------------------Creating a d20 dice roller. because I'd like to tie this in eventually with the map and characters//
+    const dice = {
+        sides: 20,
+        roll: function () {
+        const randomNumber = Math.floor(Math.random() * this.sides) +1; //math.floor uses the lowest possible number, the +1 makes sure it doesn't go as low as 0//
+        return randomNumber;
+        }
+    }
+    
+    
+    
+      //Prints dice roll to the page
+    
+    function printNumber(number) {
+        const placeholder = document.getElementById('diceNumber');  //the variable placeholder is just representing the potential number
+        placeholder.innerHTML = number; 
+    }
+    
+    const button = document.getElementById('diceButton'); //
+    
+    button.onclick = function() {
+        const result = dice.roll();
+        printNumber(result);
+    };
 // if #floor has class a specific class, have conditional show/hide on options. 
 // ie. if #floor has a class of .floorWater, show options for water obstacles, like Sharks, debris, boats, pirate enemies etc.
 //have them display=none by default, but when that class is selected, have em display=block

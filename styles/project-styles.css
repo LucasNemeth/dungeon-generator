@@ -256,5 +256,26 @@ h2{
 .monsterBtn{
     border: none;
 }
-
+/*------- Dice Roller -------*/
+#diceButton {
+    background-color: rgb(116, 76, 71);
+    border-radius: 6px;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+}
+#diceNumber {
+    font-family: 'Eagle Lake', cursive;
+    height: 100px;
+    width: 100px;
+    padding: 25px;
+    padding-top:20px;
+    margin: 50px auto;
+    border: 1px solid gray;
+    border-radius: 10px;  
+    font-size:50px;
+}
 
