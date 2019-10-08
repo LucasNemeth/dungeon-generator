@@ -8,13 +8,50 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 /*map structure*/
+html{
+    font-size: 62.5%;
+}
+body {
+    background:rgb(221, 198, 188);
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    
+}
 .map{
     position: relative;
     display: block;
     width: 500px;
     height:500px;
     border: 5px solid black;
+    margin: 30px 0;
     /* left: 50vw; */
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right:30px;
+    top:60px;
+}
+.floorOptions{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+h2{
+    text-transform: uppercase;
+    margin-bottom: 0;
 }
 
 .map div {
@@ -23,13 +60,30 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     display: block;
     position: absolute;
 }
+.grid img{
+    opacity: 0.5;
+}
 
+.floorOptions button{
+    border:none;
+    font-size: 2rem;
+    height:30px;
+    margin-bottom: 5px;
+}
+.obstacleOptions button:hover{
+    background: rgb(158, 151, 151)
+}
 /* .options{
     text-align: center;
 } */
 
 .obstacleOptions div:not(.obstacleOptionsNone){
     display: none;
+}
+.obstacleOptions button{
+    margin-bottom: 20px;
+    height:30px;
+
 }
 
 /*--background images for the floor terrains*/
@@ -38,46 +92,169 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     background:cover;
 }
 
+.btnGrass{
+    /* background-image: url(../assets/floor-grass.jpg);
+    background:cover; */
+    background-color: rgb(136, 216, 104);
+}
+.btnGrass:hover{
+    background-color: rgb(56, 148, 71)
+}
+
+
+
 .floorWood{
     background-image: url(../assets/floor-wood.jpg);
     background-size: contain;
+
 }
+.btnWood{
+    background-color: rgb(167, 130, 82);
+}
+.btnWood:hover{
+    background-color: rgb(87, 75, 49)
+}
+
 .floorStone{
     background-image: url(../assets/floor-stone.jpg);
     background-size: contain;
+
+}
+.btnStone{
+    background-color: rgb(129, 129, 129);
+}
+.btnStone:hover{
+    background-color: rgb(65, 65, 65)
 }
 .floorWater{
     background-image: url(../assets/floor-water.jpg);
     background-size: contain;
+
 }
+.btnWater{
+    background-color: rgb(88, 240, 240);
+}
+.btnWater:hover{
+    background-color: rgb(21, 168, 168)
+}
+
 .floorLava{
     background-image: url(../assets/floor-lava.jpg);
     background-size: contain;
 }
-
+.btnLava{
+    background-color: rgb(180, 115, 115);
+}
+.btnLava:hover{
+    background-color: rgb(92, 59, 59)
+}
 
 /*---Obstacles --*/
 .bushObstacle{
     background-image: url(../assets/obstacle-bush.png);
     background-size: contain;
 }
+.bushBtn{
+    border: none;
+    background: rgb(231, 219, 219)
+}
+
 .treeObstacle{
     background-image: url(../assets/obstacle-tree.png);
     background-size: contain;
 }
+.treeBtn{
+    border: none;
+    background: rgb(231, 219, 219); 
+}
+
 .pitObstacle{
     background-image: url(../assets/pit-obstacle.png);
     background-size: contain;
 }
+.pitBtn{
+    border: none;
+    background: rgb(231, 219, 219);
+}
+
 .rocksObstacle{
     background-image: url(../assets/rock-obstacle.png);
     background-size: contain;
 }
+.rocksBtn{
+    border: none;
+    background: rgb(231, 219, 219);
+}
+
 .barrelObstacle{
     background-image: url(../assets/barrel-obstacle.png);
     background-size: contain;
 }
+.barrelBtn{
+    border: none;
+    background: rgb(231, 219, 219);
+}
+
 .chestObstacle{
     background-image: url(../assets/chest-obstacle.png);
     background-size: contain;
 }
+.chestBtn{
+    border: none;
+    background: rgb(231, 219, 219);
+}
+
+.shipObstacle{
+    background-image: url(../assets/debris-obstacle.png);
+    background-size: cover;
+}
+.shipBtn{
+    border: none;
+    background: rgb(231, 219, 219);
+}
+
+.icebergObstacle{
+    background-image: url(../assets/iceberg-obstacle.png);
+    background-size: cover;
+}
+.icebergBtn{
+    border: none;
+    background: rgb(231, 219, 219)
+}
+
+.fireObstacle{
+    background-image:url(../assets/fire-obstacle.png);
+    background-size: cover;
+}
+.fireBtn{
+    border: none;
+    background: rgb(231, 219, 219);
+}
+
+.spikeObstacle{
+    background-image: url(../assets/spike-obstacle.png);
+    background-size: cover;
+}
+.spikeBtn{
+    border: none;
+    background: rgb(231, 219, 219);
+}
+/*----characters------*/
+.warrior{
+    background-image: url(../assets/warrior.png);
+    background-size: cover;
+}
+.warriorBtn{
+    border:none;
+
+}
+
+.monster{
+    background-image: url(../assets/goblin.png);
+    background-size: cover;
+}
+.monsterBtn{
+    border: none;
+}
+
+
